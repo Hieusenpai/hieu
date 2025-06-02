@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Demo Web Songoku</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Trang tổng & chi tiết</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Chào bạn!</h1>
-  <p>Đây là trang web demo có nền Songoku đẹp.</p>
 
-  <button id="btnClick">Nhấn vào tôi!</button>
+  <h1 id="title">Trang tổng - Thông tin môi trường</h1>
 
-  <div id="message"></div>
+  <div id="homePage">
+    <div class="button-group">
+      <button data-target="temp">Xem nhiệt độ</button>
+      <button data-target="humidity">Xem độ ẩm</button>
+      <button data-target="history">Xem lịch sử</button>
+    </div>
+  </div>
+
+  <div id="content">
+    <!-- Bảng thông tin sẽ hiện ở đây -->
+    <div id="tableContainer"></div>
+    <button id="backBtn">Quay lại</button>
+  </div>
 
   <script src="script.js"></script>
 </body>
