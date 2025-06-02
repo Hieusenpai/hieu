@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Trang tổng & chi tiết</title>
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <h1 id="title">Trang tổng - Thông tin môi trường</h1>
-
-  <div id="homePage">
-    <div class="button-group">
-      <button data-target="temp">Xem nhiệt độ</button>
-      <button data-target="humidity">Xem độ ẩm</button>
-      <button data-target="history">Xem lịch sử</button>
+  <div id="main" class="section active" style="background-image: url('https://symbols.vn/wp-content/uploads/2022/01/Hinh-Nen-Songoku-4k-manh-me-nhat.jpg');">
+    <h1>Thời tiết Hà Nội</h1>
+    <div class="buttons">
+      <button onclick="showSection('temp')">Xem Nhiệt độ</button>
+      <button onclick="showSection('wind')">Xem Tốc độ gió & Mây</button>
+      <button onclick="showSection('history')">Xem Lịch sử</button>
     </div>
   </div>
 
-  <div id="content">
-    <!-- Bảng thông tin sẽ hiện ở đây -->
-    <div id="tableContainer"></div>
-    <button id="backBtn">Quay lại</button>
+  <div id="temp" class="section" style="background-image: url('https://symbols.vn/wp-content/uploads/2022/01/Hinh-Nen-Songoku-4k-manh-me-nhat.jpg');">
+    <button class="back-btn" onclick="backToMain()">← Quay lại</button>
+    <h2>Nhiệt độ hiện tại</h2>
+    <div id="tempValue" class="info-table"></div>
+  </div>
+
+  <div id="wind" class="section" style="background-image: url('https://img4.thuthuatphanmem.vn/uploads/2019/10/30/hinh-anh-mat-troi-dep-nhat_105126148.jpg');">
+    <button class="back-btn" onclick="backToMain()">← Quay lại</button>
+    <h2>Tốc độ gió và độ che phủ mây hiện tại</h2>
+    <div id="windValue" class="info-table"></div>
+  </div>
+
+  <div id="history" class="section" style="background-image: url('https://viettelinternet24h.com/wp-content/uploads/2022/08/img_630afc915a2d0.jpg');">
+    <button class="back-btn" onclick="backToMain()">← Quay lại</button>
+    <h2>Lịch sử dữ liệu (5 phút cập nhật 1 lần)</h2>
+    <table id="historyData">
+      <thead>
+        <tr>
+          <th>Thời gian</th>
+          <th>Nhiệt độ (°C)</th>
+          <th>Tốc độ gió (km/h)</th>
+          <th>Độ che phủ mây (%)</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
   </div>
 
   <script src="script.js"></script>
