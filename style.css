@@ -1,28 +1,76 @@
-body {
+html, body {
+  height: 100%;
+  margin: 0; padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url('https://symbols.vn/wp-content/uploads/2022/01/Hinh-Nen-Songoku-4k-manh-me-nhat.jpg');
+  color: white;
+  text-align: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 0;
-  color: white;
+  transition: background-image 0.7s ease-in-out;
 }
+
 h1 {
-  color: #ffd700; /* vàng nổi bật trên nền */
+  margin-top: 30px;
+  color: #ffd700;
+  text-shadow: 2px 2px 5px #000;
 }
+
+.button-group {
+  margin: 30px 0;
+}
+
 button {
-  padding: 10px 20px;
-  background-color: rgba(0, 122, 204, 0.7);
+  padding: 12px 25px;
+  margin: 0 12px;
+  font-size: 18px;
   border: none;
+  border-radius: 6px;
+  background-color: rgba(0, 122, 204, 0.8);
   color: white;
   cursor: pointer;
-  border-radius: 5px;
-  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
+
 button:hover {
-  background-color: rgba(0, 95, 153, 0.7);
+  background-color: rgba(0, 95, 153, 0.8);
 }
-#message {
+
+#content {
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 15px #000;
+  font-size: 18px;
+  display: none; /* Ẩn mặc định */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+}
+
+table, th, td {
+  border: 1px solid white;
+}
+
+th, td {
+  padding: 10px 12px;
+}
+
+th {
+  background-color: rgba(255, 215, 0, 0.8);
+  color: black;
+}
+
+#backBtn {
   margin-top: 20px;
-  font-weight: bold;
+  background-color: rgba(255, 69, 0, 0.8);
+}
+
+#backBtn:hover {
+  background-color: rgba(200, 40, 0, 0.8);
 }
