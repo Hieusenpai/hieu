@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web của Bắp Bắp</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+    }
+    main {
+      padding: 2em;
+      min-height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    button {
+      margin: 1em;
+      padding: 1em 2em;
+      font-size: 1.2em;
+      cursor: pointer;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #555;
+    }
+    #content {
+      font-size: 6em;
+      color: #333;
+      margin-top: 2em;
+      min-height: 100px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Xin chào bạn tới với web của Bắp Bắp</h1>
+  </header>
+  <main>
+    <p>Đây là một trang web tĩnh đơn giản viết bằng HTML và CSS.</p>
+    <div>
+      <button onclick="showPage(1)">Trang 1</button>
+      <button onclick="showPage(2)">Trang 2</button>
+    </div>
+    <div id="content"></div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Bắp Bắp</p>
+  </footer>
+
+  <script>
+    function showPage(num) {
+      const content = document.getElementById('content');
+      // Cập nhật nội dung tùy theo nút bấm
+      if (num === 1) {
+        content.textContent = 'hieuhieu';
+      } else if (num === 2) {
+        content.textContent = 'bapbap';
+      }
+    }
+  </script>
+</body>
+</html>
